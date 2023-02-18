@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="8" passed="8">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite1" duration-ms="47" started-at="2021-02-11T21:37:18 EST" finished-at="2021-02-11T21:37:18 EST">
+    <groups>
+    </groups>
+    <test name="Regression" duration-ms="47" started-at="2021-02-11T21:37:18 EST" finished-at="2021-02-11T21:37:18 EST">
+      <class name="MvnTestPackage.RestAssuredTest">
+        <test-method status="PASS" signature="postTest()[pri:0, instance:MvnTestPackage.RestAssuredTest@13deb50e]" name="postTest" duration-ms="0" started-at="2021-02-11T21:37:18 EST" finished-at="2021-02-11T21:37:18 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postTest -->
+        <test-method status="PASS" signature="getTest()[pri:0, instance:MvnTestPackage.RestAssuredTest@13deb50e]" name="getTest" duration-ms="0" started-at="2021-02-11T21:37:18 EST" finished-at="2021-02-11T21:37:18 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getTest -->
+      </class> <!-- MvnTestPackage.RestAssuredTest -->
+      <class name="MvnTestPackage.SeleniumTest">
+        <test-method status="PASS" signature="webTestTwo()[pri:0, instance:MvnTestPackage.SeleniumTest@f6c48ac]" name="webTestTwo" duration-ms="0" started-at="2021-02-11T21:37:18 EST" finished-at="2021-02-11T21:37:18 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- webTestTwo -->
+        <test-method status="PASS" signature="webTest()[pri:0, instance:MvnTestPackage.SeleniumTest@f6c48ac]" name="webTest" duration-ms="0" started-at="2021-02-11T21:37:18 EST" finished-at="2021-02-11T21:37:18 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- webTest -->
+        <test-method status="PASS" signature="uiTest()[pri:0, instance:MvnTestPackage.SeleniumTest@f6c48ac]" name="uiTest" duration-ms="0" started-at="2021-02-11T21:37:18 EST" finished-at="2021-02-11T21:37:18 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- uiTest -->
+        <test-method status="PASS" signature="webTestOne()[pri:0, instance:MvnTestPackage.SeleniumTest@f6c48ac]" name="webTestOne" duration-ms="0" started-at="2021-02-11T21:37:18 EST" finished-at="2021-02-11T21:37:18 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- webTestOne -->
+      </class> <!-- MvnTestPackage.SeleniumTest -->
+      <class name="MvnTestPackage.AppiumTest">
+        <test-method status="PASS" signature="androidTest()[pri:0, instance:MvnTestPackage.AppiumTest@464bee09]" name="androidTest" duration-ms="0" started-at="2021-02-11T21:37:18 EST" finished-at="2021-02-11T21:37:18 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- androidTest -->
+        <test-method status="PASS" signature="mobileTest()[pri:0, instance:MvnTestPackage.AppiumTest@464bee09]" name="mobileTest" duration-ms="0" started-at="2021-02-11T21:37:18 EST" finished-at="2021-02-11T21:37:18 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- mobileTest -->
+      </class> <!-- MvnTestPackage.AppiumTest -->
+    </test> <!-- Regression -->
+  </suite> <!-- Suite1 -->
+</testng-results>

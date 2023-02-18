@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.example</groupId>
+    <artifactId>mavenProject</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+
+    <!--Doing profiling we can easily run our specefic testng.xml file using mvn with  cmd
+    but all we have to do make test related xml file and we have to add line profiles to profiles
+    and then we are able to add multiple profile and make sure configure correct testng.xml file
+    (this is the command in cmd mvn test -P AND NAME OF THE TEST (AS A EXAMPLE IN TESTNG1.XML FILE
+    I HAVE TEST NAME <test name="Smoke" also we have to add  <configuration>
+                <suiteXmlFiles>
+                    <suiteXmlFile>testng1.xml</suiteXmlFile>
+                </suiteXmlFiles>
+            </configuration>>-->
+    <profiles>
+        <profile>
+            <id>Smoke</id>
+            <build>
+                <plugins>
+                    <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>2.22.2</version>
+            <configuration>
+                <suiteXmlFiles>
+                    <suiteXmlFile>testng1.xml</suiteXmlFile>
+                </suiteXmlFiles>
+            </configuration>
+
+
+        </plugin>
+    </plugins>
+</build>
+        </profile>
+        <profile>
+            <id>Regression</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <version>2.22.2</version>
+                        <configuration>
+                            <suiteXmlFiles>
+                                <suiteXmlFile>testng.xml</suiteXmlFile>
+                            </suiteXmlFiles>
+                        </configuration>
+
+
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+    <dependencies>
+
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>3.141.59</version>
+        </dependency>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.1.0</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <!--if we are running our test in mvn using cmd we must have to create all classes name
+                 ending with Test(as
+                a example class name AppiumTest.java
+                -->
+                <!--we need maven surefire plugin to execute our test using maventerminal or cmd -->
+                <!-- mvn -Dtest=AppiumTest test (to run single test using command prompt)-->
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.22.2</version>
+                <!--Bellow lines from 31 to 35 just added to pom to run testng.xml file so using that line
+                we can run all the tests added in testng.xml file run into maven using cmd -->
+
+                <configuration>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>testng.xml</suiteXmlFile>
+                    </suiteXmlFiles>
+                </configuration>
+
+
+            </plugin>
+        </plugins>
+    </build>
+
+
+</project>
